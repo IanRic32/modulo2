@@ -9,6 +9,7 @@
 <body>
     <div class = "Encabezado">
         <ul class = "navegacion">
+            <li> <img src=".imagenes/foto1.jpg" alt="Encabezado"></li>
             <li class="li_head">Clase 1</li>
             <li class="li_head">Clase 2</li>
             <li class="li_head">Clase 3</li>
@@ -65,18 +66,73 @@
         </div>
         <div class="temas_clase">
             <p class="temas_head">Herencia</p>
+            La herencia en CSS se refiere a la forma en que las propiedades CSS de un elemento padre se transmiten a sus elementos hijos. No todas las propiedades se heredan, pero muchas de las propiedades que afectan el texto y el diseño se heredan automáticamente. Aquí tienes algunos puntos clave: <br>
+            Propiedades Heredables: Propiedades como color, font-family, font-size, line-height, text-align, y visibility se heredan por defecto. <br>
+            Propiedades No Heredables: Propiedades como margin, padding, border, background, y width no se heredan por defecto. Estas propiedades deben ser definidas explícitamente para cada elemento. <br>
+            Uso de inherit: Puedes forzar la herencia de cualquier propiedad utilizando la palabra clave inherit. <br>
         </div>
         <div class="temas_clase">
-            <p class="temas_head">Introducción Flexbox</p>
-        </div>
-        <div class="temas_clase">
-            <p class="temas_head">Alineación Flexbox</p>
+            <p class="temas_head">Flexbox</p>
+            Ejes Principal y Secundario: Flexbox organiza los elementos en un contenedor en dos ejes: el eje principal (por defecto, horizontal) y el eje secundario (por defecto, vertical). Los elementos flexibles pueden alinearse y distribuirse a lo largo de estos ejes. <br><br>
+Contenedores Flex y Elementos Flex: Un contenedor flex se define aplicando display: flex; a un contenedor. Los hijos de este contenedor se convierten automáticamente en elementos flexibles y se organizan según las reglas de flexbox. <br>
+Dirección del Eje (flex-direction): Puedes cambiar la dirección en que los elementos se organizan utilizando la propiedad flex-direction. Las opciones incluyen row (por defecto), row-reverse, column, y column-reverse. <br>
+Alineación y Espaciado: <br><br>
+justify-content: Alinea los elementos a lo largo del eje principal. Opciones incluyen flex-start, flex-end, center, space-between, space-around y space-evenly. <br>
+align-items: Alinea los elementos a lo largo del eje secundario. Opciones incluyen stretch (por defecto), flex-start, flex-end, center y baseline. <br>
+align-self: Permite alinear un elemento individualmente, ignorando la configuración de align-items del contenedor. <br>
+Flexibilidad de los Elementos: <br> <br>
+flex-grow: Controla cómo un elemento puede crecer en relación a los demás elementos flexibles. <br>
+flex-shrink: Define cómo un elemento puede encogerse en relación a los demás elementos flexibles. <br>
+flex-basis: Especifica el tamaño inicial de un elemento flexible antes de que se distribuya el espacio disponible. <br>
+Orden de los Elementos: Utilizando la propiedad order, puedes cambiar el orden visual de los elementos en un contenedor flex sin alterar el HTML. <br>
+Flexbox es especialmente útil para diseños unidimensionales donde necesitas que los elementos se distribuyan de forma equitativa dentro de un contenedor, sea horizontal o verticalmente. Facilita la creación de diseños responsivos y ajustables sin necesidad de flotaciones o posiciones complicadas. <br>
         </div>
         <div class="temas_clase">
             <p class="temas_head">Position con CSS</p>
+
+            static: <br><br>
+Es el valor por defecto. <br>
+Los elementos se posicionan en el flujo normal del documento. <br>
+Las propiedades top, right, bottom y left no afectan a los elementos con position: static;. <br>
+relative: <br><br>
+El elemento se posiciona relativo a su posición original en el flujo del documento. <br>
+Las propiedades top, right, bottom y left se utilizan para ajustar su posición desde la original. <br>
+No saca al elemento del flujo normal, lo que puede afectar a otros elementos. <br>
+absolute: <br><br>
+El elemento se posiciona relativo a su contenedor más cercano que no tenga position: static; (puede ser un ancestro). <br>
+Se elimina el elemento del flujo normal del documento, por lo que no afecta a la posición de otros elementos. <br>
+Las propiedades top, right, bottom y left se utilizan para ajustar su posición. <br>
+fixed: <br><br>
+El elemento se posiciona relativo a la ventana del navegador (viewport). <br>
+Se elimina del flujo normal del documento. <br>
+Permanece fijo en la misma posición incluso cuando se hace scroll en la página. <br>
+Las propiedades top, right, bottom y left se utilizan para ajustar su posición. <br>
+sticky: <br><br>
+El elemento se comporta como relative hasta que alcanza un umbral definido por las propiedades top, right, bottom o left, en cuyo punto se comporta como fixed. <br>
+Es útil para elementos que deben permanecer visibles mientras se hace scroll hasta que se alcanza cierto punto en la página. <br> <br>
         </div>
         <div class="temas_clase">
             <p class="temas_head">Estilos Responsivos</p>
+
+            Los estilos responsivos permiten que un sitio web adapte su diseño y contenido a diferentes tamaños de pantalla y resoluciones, mejorando la experiencia del usuario en dispositivos móviles, tabletas y pantallas de escritorio.
+            <br>
+            Media Queries: <br><br>
+            Las media queries permiten aplicar estilos CSS específicos según las características del dispositivo, como el tamaño de la pantalla. <br>
+            Porcentajes y Unidades Relativas: <br><br>
+            En lugar de usar píxeles fijos, se pueden usar porcentajes, em, rem y otras unidades relativas para que los elementos se ajusten proporcionalmente al tamaño de la pantalla. <br>
+            Flexbox y CSS Grid: <br><br>
+            Estas herramientas permiten crear diseños flexibles y adaptativos que pueden reorganizarse automáticamente según el tamaño de la pantalla. <br>
+            Flexbox es ideal para diseños unidimensionales, mientras que CSS Grid es mejor para diseños bidimensionales. <br>
+            Imágenes y Medios Responsivos: <br><br>
+            Utilizar imágenes que se ajusten automáticamente al contenedor padre usando max-width: 100%; y height: auto;. <br>
+            También se pueden usar diferentes fuentes de imágenes según el dispositivo con el elemento <picture> y los atributos srcset y sizes en <img>. <br>
+            Tipografía Responsiva: <br><br>
+            Ajustar el tamaño de las fuentes de manera proporcional al tamaño del viewport utilizando unidades como vw (viewport width) y vh (viewport height). <br>
+            Beneficios de los Estilos Responsivos <br><br>
+            Mejor experiencia de usuario: Los sitios web se adaptan a diferentes dispositivos, proporcionando una navegación más cómoda y accesible. <br>
+            Mejor SEO: Los motores de búsqueda favorecen los sitios web que son móviles y responsivos. <br>
+            Mantenimiento simplificado: Un solo diseño que se adapta a todos los dispositivos es más fácil de mantener que múltiples versiones del mismo sitio. <br>
+
         </div>
     </div>
 </body>
