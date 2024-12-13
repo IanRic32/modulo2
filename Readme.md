@@ -1,8 +1,9 @@
-# Óptica Xoloc
+# Modulo 2 DevF
+
 
 Este proyecto es una página web creada para la Óptica Xoloc, ubicada en San Mateo, Tepotzotlán. La página tiene como objetivo promocionar los servicios de la óptica, proporcionar información sobre sus productos, y ofrecer un canal de contacto para los clientes.
 
-**URL del sitio**: [Óptica Xoloc en GitHub Pages](https://ianric32.github.io/primer_pagina/)
+**URL del sitio**: [Óptica Xoloc en GitHub Pages](https://ianric32.github.io/modulo2_devf/)
 
 ## Características
 
@@ -22,7 +23,7 @@ Este proyecto es una página web creada para la Óptica Xoloc, ubicada en San Ma
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/IanRic32/primer_pagina.git
+   git clone https://github.com/IanRic32/modulo2_devf.git
    ```
 
 2. Navega a la carpeta del proyecto:
