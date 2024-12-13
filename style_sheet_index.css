@@ -1,0 +1,65 @@
+.Encabezado{
+    display: inline-flex;
+    padding: 15px;
+    align-content: center;
+    background-color:azure;
+    width: 100%;
+
+}
+.navegacion{
+    display: inline-flex;
+    gap: 15%;
+    text-align: center;
+    width: 100%;
+}
+.li_head:hover{
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-color: darkgoldenrod;
+}
+.Cuerpo{
+    display: grid;
+    background-color:aliceblue;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.temas{
+    display: grid;
+    background-color:aliceblue;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.temas_head{
+    text-align: center;
+    text-decoration: black;
+    font-size: larger;
+}
+.temas_head:hover{
+    text-decoration: underline;
+    font-style: italic;
+}
+.temas_clase{
+    text-align: justify;
+    padding-left: 10px;
+}
+.cuerpo_div{
+    background-color:aliceblue;
+    padding: 10px;
+    text-align: center;
+    text-orientation: initial;
+    justify-content: center;
+}
+.items_div{
+    background-color:aliceblue;
+    padding: 10px;
+    text-align: justify;
+    justify-content: center;
+}
+footer{
+    background: fixed;
+    background-color:darkgray;
+    padding: 10px;
+    text-align: center;    
+}
