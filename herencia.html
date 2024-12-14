@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herencia en CSS</title>
+    <link rel="stylesheet" href="herencia-sheet.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Herencia en CSS</h1>
+        <nav class="Encabezado">
+            <ul class="navegacion">
+                <li><img src="imagenes/foto1.png" alt="Encabezado" height="65px" width="45px"></li>
+                <li class="li_head"><a href="propiedad_basicas.html">Propiedades Básicas de CSS</a></li>
+                <li class="li_head"><a href="index.html">Inicio</a></li>
+                <li class="li_head"><a href="intro_flexbox.html">Introducción a FlexBox</a></li>
+                <li class="li_head"><a href="alineacion_flexbox.html">Alineación en FlexBox</a></li>
+                <li class="li_head"><a href="position.html">Position en CSS</a></li>
+                <li class="li_head"><a href="estilos_responsivos.html">Estilos Responsivos en CSS</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Introducción a la Herencia en CSS</h2>
+            <p>
+                La herencia en CSS se refiere a la forma en que las propiedades CSS de un elemento padre se transmiten a sus elementos hijos. 
+                No todas las propiedades se heredan, pero muchas de las propiedades que afectan el texto y el diseño se heredan automáticamente.
+            </p>
+        </section>
+        <section>
+            <h2>Propiedades Heredables</h2>
+            <p>Propiedades como <span class="heredable">color</span>, <span class="heredable">font-family</span>, <span class="heredable">font-size</span>, 
+            <span class="heredable">line-height</span>, <span class="heredable">text-align</span>, y <span class="heredable">visibility</span> se heredan por defecto.</p>
+        </section>
+        <section>
+            <h2>Propiedades No Heredables</h2>
+            <p>Propiedades como <span class="no-heredable">margin</span>, <span class="no-heredable">padding</span>, <span class="no-heredable">border</span>, 
+            <span class="no-heredable">background</span>, y <span class="no-heredable">width</span> no se heredan por defecto. Estas propiedades deben ser definidas explícitamente para cada elemento.</p>
+        </section>
+        <section>
+            <h2>Uso de inherit</h2>
+            <p>Puedes forzar la herencia de cualquier propiedad utilizando la palabra clave <span class="inherit">inherit</span>.</p>
+        </section>
+    </main>
+    <footer>
+        <p class="copyright">&copy; Copyright Ian Ricardo - 2024</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.navegacion');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+</html>
