@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lentes de Sol y Propiedades Ópticas</title>
+    <link rel="stylesheet" href="resposivos-sheet.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Lentes de Sol y Propiedades Ópticas</h1>
+        <nav class="Encabezado">
+            <ul class="navegacion">
+                <li><img src="imagenes/foto1.png" alt="Encabezado" height="65px" width="45px"></li>
+                <li class="li_head"><a href="propiedad_basicas.html">Propiedades Básicas de CSS</a></li>
+                <li class="li_head"><a href="herencia.html">Herencia en CSS</a></li>
+                <li class="li_head"><a href="intro_flexbox.html">Introducción a FlexBox</a></li>
+                <li class="li_head"><a href="alineacion_flexbox.html">Alineación en FlexBox</a></li>
+                <li class="li_head"><a href="position.html">Posicionamiento en CSS</a></li>
+                <li class="li_head"><a href="index.html">Inicio</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Lentes de Sol y Nuevos Materiales para Micas</h2>
+            <p>Los lentes de sol no solo son un accesorio de moda, sino que también proporcionan una protección vital contra los rayos UV. Los nuevos materiales para las micas ofrecen mejoras en durabilidad, claridad y protección.</p>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Material 1: Policarbonato</h3>
+                    <p>El policarbonato es resistente a los impactos y ofrece una excelente claridad óptica.</p>
+                </div>
+                <div class="card">
+                    <h3>Material 2: Trivex</h3>
+                    <p>Trivex es un material liviano y duradero que ofrece una claridad superior y resistencia a los impactos.</p>
+                </div>
+                <div class="card">
+                    <h3>Material 3: Cristal</h3>
+                    <p>El cristal ofrece la mejor claridad óptica, aunque es más pesado y puede romperse con facilidad.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Propiedades Ópticas y Polarización de la Luz</h2>
+            <p>La polarización de la luz es una característica fundamental en las micas de los lentes de sol, ya que ayuda a reducir el deslumbramiento y mejora la claridad visual.</p>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Polarización</h3>
+                    <p>La polarización de los lentes de sol reduce el deslumbramiento al bloquear la luz reflejada que se polariza horizontalmente.</p>
+                </div>
+                <div class="card">
+                    <h3>Protección UV</h3>
+                    <p>Las micas de alta calidad bloquean el 100% de los rayos UV, protegiendo los ojos de daños potenciales.</p>
+                </div>
+                <div class="card">
+                    <h3>Claridad Óptica</h3>
+                    <p>Los nuevos materiales para micas ofrecen una claridad óptica superior, proporcionando una visión más nítida y clara.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="chat-box">
+                <p><strong>¿Qué es un posicionamiento en CSS?</strong><br>El posicionamiento en CSS permite controlar la ubicación de los elementos en la página web, utilizando valores como <code>static</code>, <code>relative</code>, <code>absolute</code>, <code>fixed</code> y <code>sticky</code>.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="copyright">&copy; Copyright Ian Ricardo - 2024</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.navegacion');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+</html>
