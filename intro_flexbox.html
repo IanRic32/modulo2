@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a Flexbox</title>
+    <link rel="stylesheet" href="intro_flexbox-sheet.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Introducción a Flexbox</h1>
+        <nav class="Encabezado">
+            <ul class="navegacion">
+                <li><img src="imagenes/foto1.png" alt="Encabezado" height="65px" width="45px"></li>
+                <li class="li_head"><a href="propiedad_basicas.html">Propiedades Básicas de CSS</a></li>
+                <li class="li_head"><a href="herencia.html">Herencia CSS</a></li>
+                <li class="li_head"><a href="index.html">Inicio</a></li>
+                <li class="li_head"><a href="alineacion_flexbox.html">Alineación en FlexBox</a></li>
+                <li class="li_head"><a href="position.html">Position en CSS</a></li>
+                <li class="li_head"><a href="estilos_responsivos.html">Estilos Responsivos en CSS</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Ejes Principal y Secundario</h2>
+            <p>Flexbox organiza los elementos en un contenedor en dos ejes: el eje principal (por defecto, horizontal) y el eje secundario (por defecto, vertical). Los elementos flexibles pueden alinearse y distribuirse a lo largo de estos ejes.</p>
+            <div class="flex-container">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+            </div>
+        </section>
+        <section>
+            <h2>Contenedores Flex y Elementos Flex</h2>
+            <p>Un contenedor flex se define aplicando <code>display: flex;</code> a un contenedor. Los hijos de este contenedor se convierten automáticamente en elementos flexibles y se organizan según las reglas de flexbox.</p>
+            <div class="flex-container">
+                <div class="flex-item">A</div>
+                <div class="flex-item">B</div>
+                <div class="flex-item">C</div>
+            </div>
+        </section>
+        <section>
+            <h2>Dirección del Eje (flex-direction)</h2>
+            <p>Puedes cambiar la dirección en que los elementos se organizan utilizando la propiedad <code>flex-direction</code>. Las opciones incluyen <code>row</code> (por defecto), <code>row-reverse</code>, <code>column</code>, y <code>column-reverse</code>.</p>
+            <div class="flex-container row-reverse">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+            </div>
+            <div class="flex-container column">
+                <div class="flex-item">A</div>
+                <div class="flex-item">B</div>
+                <div class="flex-item">C</div>
+            </div>
+        </section>
+        <section>
+            <h2>Alineación y Espaciado</h2>
+            <p><code>justify-content</code>: Alinea los elementos a lo largo del eje principal. Opciones incluyen <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, <code>space-around</code> y <code>space-evenly</code>.</p>
+            <div class="flex-container justify-center">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+            </div>
+            <p><code>align-items</code>: Alinea los elementos a lo largo del eje secundario. Opciones incluyen <code>stretch</code> (por defecto), <code>flex-start</code>, <code>flex-end</code>, <code>center</code> y <code>baseline</code>.</p>
+            <div class="flex-container align-center">
+                <div class="flex-item">A</div>
+                <div class="flex-item">B</div>
+                <div class="flex-item">C</div>
+            </div>
+            <p><code>align-self</code>: Permite alinear un elemento individualmente, ignorando la configuración de <code>align-items</code> del contenedor.</p>
+            <div class="flex-container">
+                <div class="flex-item align-self-flex-end">X</div>
+                <div class="flex-item">Y</div>
+                <div class="flex-item">Z</div>
+            </div>
+        </section>
+        <section>
+            <h2>Flexibilidad de los Elementos</h2>
+            <p><code>flex-grow</code>: Controla cómo un elemento puede crecer en relación a los demás elementos flexibles.</p>
+            <div class="flex-container">
+                <div class="flex-item flex-grow-1">1</div>
+                <div class="flex-item flex-grow-2">2</div>
+                <div class="flex-item flex-grow-3">3</div>
+            </div>
+            <p><code>flex-shrink</code>: Define cómo un elemento puede encogerse en relación a los demás elementos flexibles.</p>
+            <div class="flex-container">
+                <div class="flex-item flex-shrink-1">A</div>
+                <div class="flex-item flex-shrink-2">B</div>
+                <div class="flex-item flex-shrink-3">C</div>
+            </div>
+            <p><code>flex-basis</code>: Especifica el tamaño inicial de un elemento flexible antes de que se distribuya el espacio disponible.</p>
+            <div class="flex-container">
+                <div class="flex-item flex-basis-50">X</div>
+                <div class="flex-item flex-basis-25">Y</div>
+                <div class="flex-item flex-basis-75">Z</div>
+            </div>
+        </section>
+        <section>
+            <h2>Orden de los Elementos</h2>
+            <p>Utilizando la propiedad <code>order</code>, puedes cambiar el orden visual de los elementos en un contenedor flex sin alterar el HTML.</p>
+            <div class="flex-container">
+                <div class="flex-item order-3">1</div>
+                <div class="flex-item order-1">2</div>
+                <div class="flex-item order-2">3</div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="copyright">&copy; Copyright Ian Ricardo - 2024</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.navegacion');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+</html>
