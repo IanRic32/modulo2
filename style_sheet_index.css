@@ -1,66 +1,92 @@
-.Encabezado{
-    display: inline-flex;
+.Encabezado {
+    display: flex;
     padding: 15px;
-    align-content: center;
-    background-color:azure;
-    width: 100%;
-
-}
-.navegacion{
-    display: inline-flex;
-    gap: 15%;
-    text-align: center;
+    align-items: center;
+    background-color: azure;
     width: 100%;
 }
-.li_head:hover{
+.navegacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    list-style-type: none; /* Eliminar los bullets */
+    padding: 0; /* Eliminar el padding */
+    margin: 0; /* Eliminar el margen */
+}
+.li_head:hover {
     text-transform: uppercase;
     text-decoration: underline;
     text-decoration-color: darkgoldenrod;
 }
-.Cuerpo{
+.Cuerpo {
     display: grid;
-    background-color:aliceblue;
-    grid-template-columns: repeat(2, 1fr);
+    background-color: aliceblue;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
 }
-.temas{
+.temas {
     display: grid;
-    background-color:aliceblue;
-    grid-template-columns: repeat(3, 2fr);
+    background-color: aliceblue;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 15px;
-    grid-auto-rows: minmax(100px, auto);
 }
-.temas_head{
+.temas_head {
     text-align: center;
     text-decoration: black;
     font-size: larger;
 }
-.temas_head:hover{
+.temas_head:hover {
     text-decoration: underline;
     font-style: italic;
 }
-.temas_clase{
+.temas_clase {
     text-align: justify;
     padding: 15px;
-    
 }
-.cuerpo_div{
-    background-color:aliceblue;
+.cuerpo_div, .items_div {
+    background-color: aliceblue;
     padding: 10px;
     text-align: center;
-    text-orientation: initial;
     justify-content: center;
 }
-.items_div{
-    background-color:aliceblue;
+footer {
+    background-color: darkgray;
     padding: 10px;
-    text-align: justify;
-    justify-content: center;
+    text-align: center;
 }
-footer{
-    background: fixed;
-    background-color:darkgray;
-    padding: 10px;
-    text-align: center;    
+ul {
+    list-style-type: none; /* Eliminar los bullets */
+    padding: 0; /* Eliminar el padding */
+    margin: 0; /* Eliminar el margen */
 }
+@media (max-width: 768px) {
+    .navegacion {
+        display: none;
+    }
+    .Encabezado {
+        display: block;
+        text-align: center;
+    }
+    .Encabezado img {
+        max-width: 100%;
+    }
+    .Encabezado::after {
+        content: "☰";
+        font-size: 24px;
+        display: block;
+        cursor: pointer;
+    }
+}
+@media (max-width: 480px) {
+    .Encabezado {
+        padding: 10px;
+    }
+    .Cuerpo {
+        grid-template-columns: 1fr;
+    }
+    .temas {
+        grid-template-columns: 1fr;
+    }
+}
+
