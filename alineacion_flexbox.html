@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alineaciones en Flexbox y Lentes de Sol</title>
+    <link rel="stylesheet" href="alineacion_flexbox-sheet.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Alineaciones en Flexbox y Lentes de Sol</h1>
+        <nav class="Encabezado">
+            <ul class="navegacion">
+                <li><img src="imagenes/foto1.png" alt="Encabezado" height="65px" width="45px"></li>
+                <li class="li_head"><a href="propiedad_basicas.html">Propiedades Básicas de CSS</a></li>
+                <li class="li_head"><a href="herencia.html">Herencia</a></li>
+                <li class="li_head"><a href="intro_flexbox.html">Introducción a FlexBox</a></li>
+                <li class="li_head"><a href="index.html">Inicio</a></li>
+                <li class="li_head"><a href="position.html">Position en CSS</a></li>
+                <li class="li_head"><a href="estilos_responsivos.html">Estilos Responsivos en CSS</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Lentes de Sol y Nuevos Materiales para Micas</h2>
+            <p>Los lentes de sol no solo son un accesorio de moda, sino que también proporcionan una protección vital contra los rayos UV. Los nuevos materiales para las micas ofrecen mejoras en durabilidad, claridad y protección.</p>
+            <div class="flex-container justify-content-space-between">
+                <div class="card">
+                    <h3>Material 1: Policarbonato</h3>
+                    <p>El policarbonato es resistente a los impactos y ofrece una excelente claridad óptica.</p>
+                </div>
+                <div class="card">
+                    <h3>Material 2: Trivex</h3>
+                    <p>Trivex es un material liviano y duradero que ofrece una claridad superior y resistencia a los impactos.</p>
+                </div>
+                <div class="card">
+                    <h3>Material 3: Cristal</h3>
+                    <p>El cristal ofrece la mejor claridad óptica, aunque es más pesado y puede romperse con facilidad.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Alineaciones en Flexbox</h2>
+            <p>Las alineaciones en Flexbox permiten distribuir y alinear los elementos de manera eficiente y flexible dentro de un contenedor.</p>
+            <h3>justify-content</h3>
+            <p>Alinea los elementos a lo largo del eje principal.</p>
+            <div class="flex-container justify-content-flex-start">
+                <div class="card">Flex Start</div>
+                <div class="card">Flex Start</div>
+                <div class="card">Flex Start</div>
+            </div>
+            <div class="flex-container justify-content-flex-end">
+                <div class="card">Flex End</div>
+                <div class="card">Flex End</div>
+                <div class="card">Flex End</div>
+            </div>
+            <div class="flex-container justify-content-center">
+                <div class="card">Center</div>
+                <div class="card">Center</div>
+                <div class="card">Center</div>
+            </div>
+            <div class="flex-container justify-content-space-between">
+                <div class="card">Space Between</div>
+                <div class="card">Space Between</div>
+                <div class="card">Space Between</div>
+            </div>
+            <div class="flex-container justify-content-space-around">
+                <div class="card">Space Around</div>
+                <div class="card">Space Around</div>
+                <div class="card">Space Around</div>
+            </div>
+            <h3>align-items</h3>
+            <p>Alinea los elementos a lo largo del eje secundario.</p>
+            <div class="flex-container align-items-flex-start" style="height: 200px;">
+                <div class="card">Flex Start</div>
+                <div class="card">Flex Start</div>
+                <div class="card">Flex Start</div>
+            </div>
+            <div class="flex-container align-items-flex-end" style="height: 200px;">
+                <div class="card">Flex End</div>
+                <div class="card">Flex End</div>
+                <div class="card">Flex End</div>
+            </div>
+            <div class="flex-container align-items-center" style="height: 200px;">
+                <div class="card">Center</div>
+                <div class="card">Center</div>
+                <div class="card">Center</div>
+            </div>
+            <div class="flex-container align-items-stretch" style="height: 200px;">
+                <div class="card">Stretch</div>
+                <div class="card">Stretch</div>
+                <div class="card">Stretch</div>
+            </div>
+            <div class="flex-container align-items-baseline" style="height: 200px;">
+                <div class="card">Baseline</div>
+                <div class="card">Baseline</div>
+                <div class="card">Baseline</div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="copyright">&copy; Copyright Ian Ricardo - 2024</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.navegacion');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+</html>
