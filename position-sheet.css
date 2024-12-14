@@ -1,0 +1,319 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333; /* Color heredado */
+}
+.header, .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+main {
+    padding: 1rem;
+}
+h1, h2, p, .section {
+    color: inherit; /* Usar el color heredado */
+    font-family: inherit; /* Usar la fuente heredada */
+}
+
+/* Herencia aplicada */
+.section {
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+.heredable {
+    color: inherit; /* Heredado */
+    font-family: inherit; /* Heredado */
+}
+.no-heredable {
+    margin: 10px; /* No heredable */
+    padding: 10px; /* No heredable */
+    border: 1px solid black; /* No heredable */
+}
+.inherit {
+    text-align: inherit; /* Forzar la herencia */
+}
+
+/* Estilos de Encabezado y Navegación */
+.Encabezado {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    background-color: azure;
+    width: 100%;
+}
+.navegacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    list-style-type: none; /* Eliminar los bullets */
+    padding: 0; /* Eliminar el padding */
+    margin: 0; /* Eliminar el margen */
+}
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+li a {
+    text-decoration: none;
+    color: black;
+}
+.li_head:hover {
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-color: darkgoldenrod;
+}
+.li_head {
+    text-align: center;
+    align-content: center;
+}
+
+/* Estilos de Contenedores Flex y Elementos Flex */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Para asegurar que los elementos no se superpongan */
+    background-color: lightgray;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+}
+.card, .position-box {
+    background-color: #fff;
+    padding: 1rem;
+    margin: 0.5rem;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    flex: 1 1 calc(33.333% - 1rem); /* Asegurar que los elementos se distribuyan correctamente */
+    box-sizing: border-box; /* Para asegurar que el padding y border se incluyan en el tamaño */
+}
+.card:hover, .position-box:hover {
+    transform: scale(1.05); /* Efecto de agrandamiento al pasar el ratón */
+}
+
+/* Justify-Content */
+.justify-content-flex-start {
+    justify-content: flex-start;
+}
+.justify-content-flex-end {
+    justify-content: flex-end;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.justify-content-space-between {
+    justify-content: space-between;
+}
+.justify-content-space-around {
+    justify-content: space-around;
+}
+
+/* Align-Items */
+.align-items-flex-start {
+    align-items: flex-start;
+}
+.align-items-flex-end {
+    align-items: flex-end;
+}
+.align-items-center {
+    align-items: center;
+}
+.align-items-stretch {
+    align-items: stretch;
+}
+.align-items-baseline {
+    align-items: baseline;
+}
+
+/* Estilos de Posicionamiento */
+.position-box {
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 8px;
+    position: relative;
+}
+.position-static {
+    position: static;
+}
+.position-relative {
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+.position-absolute {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color:azure;
+    width: 10%;
+}
+.position-fixed {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 200px;
+    z-index: 1000;
+    background-color: azure;
+    width: 10%;
+    padding: 10px;
+    text-align: justify;
+    
+}
+.position-sticky {
+    position: -webkit-sticky; /* Para compatibilidad con navegadores antiguos */
+    position: sticky;
+    top: 0;
+    background-color: #f4f4f4;
+}
+
+/* Media Queries para el Menú Hamburguesa */
+@media (max-width: 768px) {
+    .navegacion {
+        display: none;
+        flex-direction: column;
+    }
+    .hamburger {
+        display: block;
+    }
+    .Encabezado {
+        display: block;
+        text-align: center;
+    }
+    .Encabezado img {
+        max-width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    .Encabezado {
+        padding: 10px;
+    }
+    .flex-container {
+        flex-direction: column;
+    }
+}
+.Encabezado {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    background-color: azure;
+    width: 100%;
+}
+.navegacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    list-style-type: none; /* Eliminar los bullets */
+    padding: 0; /* Eliminar el padding */
+    margin: 0; /* Eliminar el margen */
+}
+li a{
+    text-decoration: none;
+    color: black;
+}
+.li_head:hover {
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-color: darkgoldenrod;
+}
+.li_head{
+    text-align: center;
+    align-content: center;
+}
+.Cuerpo {
+    display: grid;
+    background-color: aliceblue;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+}
+.temas {
+    display: grid;
+    background-color: aliceblue;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 15px;
+}
+.temas_head {
+    text-align: center;
+    text-decoration: black;
+    font-size: larger;
+}
+.temas_head:hover {
+    text-decoration: underline;
+    font-style: italic;
+}
+.temas_clase {
+    text-align: justify;
+    padding: 15px;
+    background-color: #ffffff; /* Fondo blanco para la tarjeta */
+    border: 1px solid #ddd; /* Borde de la tarjeta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra de la tarjeta */
+    border-radius: 8px; /* Esquinas redondeadas */
+    transition: transform 0.2s; /* Transición suave para el efecto hover */
+}
+.temas_clase:hover {
+    transform: scale(1.05); /* Efecto de agrandamiento al pasar el ratón */
+}
+.cuerpo_div {
+    background-color: aliceblue;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+}
+.items_div {
+    padding: 25px;
+    text-align: center;
+    justify-content: center;
+    font-size: large;
+}
+footer {
+    background-color: darkgray;
+    padding: 10px;
+    text-align: center;
+}
+ul {
+    list-style-type: none; /* Eliminar los bullets */
+    padding: 0; /* Eliminar el padding */
+    margin: 0; /* Eliminar el margen */
+}
+@media (max-width: 768px) {
+    .navegacion {
+        display: none;
+    }
+    .Encabezado {
+        display: block;
+        text-align: center;
+    }
+    .Encabezado img {
+        max-width: 100%;
+    }
+    .Encabezado::after {
+        content: "☰";
+        font-size: 24px;
+        display: block;
+        cursor: pointer;
+    }
+}
+@media (max-width: 480px) {
+    .Encabezado {
+        padding: 10px;
+    }
+    .Cuerpo {
+        grid-template-columns: 1fr;
+    }
+    .temas {
+        grid-template-columns: 1fr;
+    }
+}
