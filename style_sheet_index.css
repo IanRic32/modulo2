@@ -14,10 +14,18 @@
     padding: 0; /* Eliminar el padding */
     margin: 0; /* Eliminar el margen */
 }
+li a{
+    text-decoration: none;
+    color: black;
+}
 .li_head:hover {
     text-transform: uppercase;
     text-decoration: underline;
     text-decoration-color: darkgoldenrod;
+}
+.li_head{
+    text-align: center;
+    align-content: center;
 }
 .Cuerpo {
     display: grid;
@@ -43,12 +51,26 @@
 .temas_clase {
     text-align: justify;
     padding: 15px;
+    background-color: #ffffff; /* Fondo blanco para la tarjeta */
+    border: 1px solid #ddd; /* Borde de la tarjeta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra de la tarjeta */
+    border-radius: 8px; /* Esquinas redondeadas */
+    transition: transform 0.2s; /* Transición suave para el efecto hover */
 }
-.cuerpo_div, .items_div {
+.temas_clase:hover {
+    transform: scale(1.05); /* Efecto de agrandamiento al pasar el ratón */
+}
+.cuerpo_div {
     background-color: aliceblue;
     padding: 10px;
     text-align: center;
     justify-content: center;
+}
+.items_div {
+    padding: 25px;
+    text-align: center;
+    justify-content: center;
+    font-size: large;
 }
 footer {
     background-color: darkgray;
@@ -89,4 +111,3 @@ ul {
         grid-template-columns: 1fr;
     }
 }
-
