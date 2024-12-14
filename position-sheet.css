@@ -155,14 +155,14 @@ li a {
 }
 .position-absolute {
     position: absolute;
-    top: 20px;
+    top: 200px;
     left: 20px;
     background-color:azure;
     width: 10%;
 }
 .position-fixed {
     position: fixed;
-    top: 10px;
+    top: 200px;
     right: 10px;
     width: 200px;
     z-index: 1000;
