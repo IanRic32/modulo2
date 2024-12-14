@@ -3,7 +3,7 @@
 
 Este proyecto es una página web creada para la Óptica Xoloc, ubicada en San Mateo, Tepotzotlán. La página tiene como objetivo promocionar los servicios de la óptica, proporcionar información sobre sus productos, y ofrecer un canal de contacto para los clientes.
 
-**URL del sitio**: [Óptica Xoloc en GitHub Pages](https://ianric32.github.io/modulo2_devf/)
+**URL del sitio**: [Modulo 2 en GitHub Pages](https://ianric32.github.io/modulo2/index.html)
 
 ## Características
 
